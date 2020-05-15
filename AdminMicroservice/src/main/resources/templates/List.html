@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeLeaf.org">
+	<head>
+	<meta charset="ISO-8859-1">
+	<title>Assignment Management</title>
+	</head>
+<body>
+<div align="center">
+<h1>List of Assessments</h1>
+<br/>
+<table border="1" cellpadding="10">
+<thead>
+<tr>
+<td>ID</td>
+<td>UserID</td>
+<td>Asessment</td>
+<td>Date</td>
+<td>Type</td>
+</tr>
+</thead>
+<tbody>
+<tr th:each="asi : ${list}">
+     <td th:text="${asi.id}">id</td>
+     <td th:text="${asi.userid}">userid</td>
+     <td th:text="${asi.assignment}">assignment</td>
+     <td th:text="${asi.date}">date</td>
+     <td th:text="${asi.type}">type</td>
+</tr>
+</tbody>
+
+</table>
+</div>
+</body>
+</html>
